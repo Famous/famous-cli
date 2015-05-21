@@ -1,0 +1,42 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+
+var create = require('../lib/user/create');
+var get = require('../lib/user/get');
+var login = require('../lib/user/login');
+var logout = require('../lib/user/logout');
+
+program
+  .command('create')
+  .description('create a user accound with Famous Hub Services. Identical to \'$ famous register\'')
+  .action(create);
+
+program
+  .command('get')
+  .description('get the current user for famous hub')
+  .action(get);
+
+program
+  .command('login')
+  .description('log a user in to famous hub')
+  .action(login);
+
+program
+  .command('logout')
+  .description('logout from famous hub')
+  .action(logout);
+
+program
+  .command('*')
+  .action(function(env) {
+    program.help();
+  });
+
+program
+  .parse(process.argv);
+
+if (!program.args.length) {
+    program.help();
+}
+

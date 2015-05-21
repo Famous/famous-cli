@@ -1,0 +1,48 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+
+var create = require('../lib/project/create');
+var get = require('../lib/project/get');
+var update = require('../lib/widget/push');
+var share = require('../lib/project/share');
+var index = require('../lib/project/index');
+
+program
+  .command('create')
+  .description('create a famous project')
+  .action(create);
+
+program
+  .command('get')
+  .description('get the current widget and container for this project')
+  .action(get);
+
+program
+  .command('index')
+  .description('list all famous projects')
+  .action(index);
+
+program
+  .command('update')
+  .description('update the current widget')
+  .action(update);
+
+program
+  .command('share')
+  .description('share the current container')
+  .action(share);
+
+program
+  .command('*')
+  .action(function(env) {
+    program.help();
+  });
+
+program
+  .parse(process.argv);
+
+if (!program.args.length) {
+    program.help();
+}
+

@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+
+var create = require('../lib/container/create');
+var get = require('../lib/container/get');
+var index = require('../lib/container/index');
+
+program
+  .command('create')
+  .description('create a famous container')
+  .action(create);
+
+program
+  .command('get')
+  .description('get the current container for this widget')
+  .action(get);
+
+program
+  .command('index')
+  .description('list your containers')
+  .action(index);
+
+program
+  .parse(process.argv);
+
+if (!program.args.length) {
+    program.help();
+}
+
