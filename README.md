@@ -7,7 +7,7 @@ register, manage user accounts, create, update and share projects
 
 ## Install the CLI
 
-    $ npm install -g famous
+    $ npm install -g famous-cli
 
 executing `$ famous` will display the default help string
 
