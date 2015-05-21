@@ -11,6 +11,11 @@ var deploy = require('../lib/deploy');
 var metrics = require('../lib/metrics/mixpanel');
 var storage = require('../res/sdk-bundle').storage;
 
+var auto = require('../lib/autoupdate');
+
+auto(function(){
+    console.log('autoupdate finished');
+
 
 program
   .version('0.0.1');
@@ -72,3 +77,4 @@ if (program.args.length === 0) {
     program.help();
 }
 
+});

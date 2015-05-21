@@ -1,6 +1,6 @@
 {
   "name": "famous-cli",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "CLI interface for Famous Industries Web Services",
   "main": "index.js",
   "repository": "https://github.famo.us/hub/famous-cli.git",
@@ -28,6 +28,7 @@
     "fs-extra": "^0.18.3",
     "inquirer": "0.8.2",
     "isbinaryfile": "2.0.3",
+    "latest-version": "^1.0.0",
     "mime": "^1.3.4",
     "mime-types": "^2.0.12",
     "minimist": "1.1.0",
