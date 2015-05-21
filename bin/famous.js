@@ -14,11 +14,8 @@ var storage = require('../res/sdk-bundle').storage;
 var auto = require('../lib/autoupdate');
 
 auto(function(){
-    console.log('autoupdate finished');
-
-
 program
-  .version('0.0.1');
+  .version(require('../package').version);
   // .command('user <cmd>', 'famous hub user CLI')
   // .command('container <cmd>', 'famous hub container CLI')
   // .command('widget <cmd>', 'famous hub widget CLI')
@@ -76,5 +73,4 @@ storage.getGlobal(function(error, config){
 if (program.args.length === 0) {
     program.help();
 }
-
 });
