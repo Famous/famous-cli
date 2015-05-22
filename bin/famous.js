@@ -14,7 +14,7 @@ var storage = require('../res/sdk-bundle').storage;
 var auto = require('../lib/autoupdate');
 
 storage.getGlobal(function(error, config){
-    if (config.tracking) metrics.track(process.argv[2]);
+    if (config.tracking) metrics.track(process.argv[2] || 'help');
 });
 
 auto(function(){
