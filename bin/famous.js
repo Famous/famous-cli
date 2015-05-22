@@ -67,7 +67,7 @@ program
   .parse(process.argv);
 
 storage.getGlobal(function(error, config){
-    if (config.tracking) metrics.track('cli-event', {'command_data': program.args.slice(0, program.args.length - 1).join(" ")}, function(){});
+    if (config.tracking) metrics.track(process.argv[2]);
 });
 
 if (program.args.length === 0) {
