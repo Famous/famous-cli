@@ -5,6 +5,7 @@ var program = require('commander');
 var register = require('../lib/user/create');
 var login = require('../lib/user/login');
 var create = require('../lib/project/create');
+var fork = require('../lib/project/fork');
 var develop = require('../lib/dev/dev');
 var userGet = require('../lib/user/get');
 var deploy = require('../lib/deploy');
@@ -42,6 +43,12 @@ program
   .description('create a famous project')
   .option('-n, --name', 'Name your project')
   .action(create);
+
+program
+  .command('fork')
+  .description('fork a famous project')
+  .option('-n, --name', 'Name of forked project')
+  .action(fork);
 
 program
   .command('develop')
