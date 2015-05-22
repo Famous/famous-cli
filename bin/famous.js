@@ -13,6 +13,10 @@ var storage = require('../res/sdk-bundle').storage;
 
 var auto = require('../lib/autoupdate');
 
+storage.getGlobal(function(error, config){
+    if (config.tracking) metrics.track(process.argv[2]);
+});
+
 auto(function(){
 program
   .version(require('../package').version);
@@ -65,10 +69,6 @@ program
 
  program
   .parse(process.argv);
-
-storage.getGlobal(function(error, config){
-    if (config.tracking) metrics.track(process.argv[2]);
-});
 
 if (program.args.length === 0) {
     program.help();
