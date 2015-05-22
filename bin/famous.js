@@ -14,7 +14,7 @@ var storage = require('../res/sdk-bundle').storage;
 var auto = require('../lib/autoupdate');
 
 storage.getGlobal(function(error, config){
-    if (config.tracking) metrics.track(process.argv[2] || 'help');
+    if (config.tracking) metrics.track('cli-event', {'command_data': process.argv.slice(2, process.argv.length).join(" ") || 'help'}, function(){});
 });
 
 auto(function(){
