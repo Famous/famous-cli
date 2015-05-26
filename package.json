@@ -1,15 +1,15 @@
 {
-  "name": "famous-cli",
-  "version": "0.2.7",
-  "description": "CLI interface for Famous Industries Web Services",
-  "main": "index.js",
-  "repository": "https://github.famo.us/hub/famous-cli.git",
-  "preferGlobal": "true",
-  "bin": {
-    "famous": "bin/famous.js"
-  },
-  "scripts": {
-    "test": "tap spec",
+    "name": "famous-cli",
+        "version": "0.2.7",
+        "description": "CLI interface for Famous Industries Web Services",
+        "main": "index.js",
+        "repository": "https://github.famo.us/hub/famous-cli.git",
+        "preferGlobal": "true",
+        "bin": {
+            "famous": "bin/famous.js"
+        },
+        "scripts": {
+            "test": "tap spec",
     "lint": "eslint bin/ lib/",
     "debug": "node --debug server.js"
   },
@@ -41,6 +41,6 @@
     "eslint": "^0.21.1",
     "rewire": "2.3.1",
     "sinon": "1.14.1",
-    "tap": "0.7.1"
+    "tap": "1.1.4"
   }
 }
