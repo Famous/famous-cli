@@ -21,11 +21,6 @@ storage.getGlobal(function(error, config){
 auto(function(){
 program
   .version(require('../package').version);
-  // .command('user <cmd>', 'famous hub user CLI')
-  // .command('container <cmd>', 'famous hub container CLI')
-  // .command('widget <cmd>', 'famous hub widget CLI')
-  // .command('analytics <cmd>', 'famous hub analytics CLI')
-  // .command('project <cmd>', 'famous hub project CLI');
 
 program
   .command('register')

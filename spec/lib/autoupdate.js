@@ -23,7 +23,7 @@ autoupdate.__set__('pkg', {"version": "1.0.1"});
 
 test(function(t) {
 
-    t.plan(4);
+    t.plan(5);
 
     t.type(autoupdate, 'function', 'autoupdate module should export a function');
 
@@ -51,6 +51,30 @@ test(function(t) {
     });
 
 
+    // checktracking, returns garbage from global config
+    t.test(function(t) {
+        var autoupdate = rewire('../../lib/autoupdate');
+
+        var storageMock = {
+            getGlobal: sinon.stub().callsArgWith(0, null, null)
+        }
+        var inquirerMock = {
+            prompt: sinon.stub().callsArgWith(1, {tracking:false})
+        }
+
+        t.plan(4);
+
+        autoupdate.__set__('storage', storageMock);
+        autoupdate.__set__('inquirer', inquirerMock);
+ 
+        checkTracking = autoupdate.__get__('checkTracking');
+        checkTracking(function (error) {
+            t.ok(true, "callback provided to autoupdate should be executed");
+            t.ok(storageMock.getGlobal.called, "storage.getGlobal should be called as part of checkTracking");
+            t.ok(inquirerMock.prompt.called, "inquirer.prompt should be called as part of checkTracking if getGlobal returns non-valid data");
+            t.equal(error, null, "return value should be null in success case");
+        }); 
+    });
     // checktracking
     t.test(function(t) {
         var autoupdate = rewire('../../lib/autoupdate');
