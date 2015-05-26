@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- '0.10'
+- iojs
+sudo: false
+notifications:
+  email:
+  - lorin@famo.us
+  - marianna@famo.us
+  - will @famo.us
