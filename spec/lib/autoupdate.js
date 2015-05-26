@@ -31,6 +31,7 @@ test(function(t) {
         t.plan(2);
 
         autoupdate.__set__('update', sinon.stub().callsArgWith(0, 0));
+        autoupdate.__set__('checkTracking', sinon.stub().callsArgWith(0,null));
 
         autoupdate(function(code) {
             t.ok(true, "calling autoupdate should execute the provided callback");
@@ -52,7 +53,7 @@ test(function(t) {
     // checktracking
     t.test(function(t) {
         var getGlobalMock = sinon.stub().callsArgWith(0, null, null);
-        var getGlobalMock;
+        var inquirerMock = sinon.stub().callsArgWith(1, null); 
         
         t.plan(1);
 
@@ -63,6 +64,7 @@ test(function(t) {
         }
 
         autoupdate.__set__('storage', storageMock);
+        autoupdate.__set__('inquirer', inquirerMock);
 
         checkTracking(function (error, data) {
             t.ok(true, "callback provided to autoupdate should be executed");
