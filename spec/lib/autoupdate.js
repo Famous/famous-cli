@@ -23,7 +23,7 @@ autoupdate.__set__('pkg', {"version": "1.0.1"});
 
 test(function(t) {
 
-    t.plan(3);
+    t.plan(4);
 
     t.type(autoupdate, 'function', 'autoupdate module should export a function');
 
@@ -34,7 +34,7 @@ test(function(t) {
 
         autoupdate(function(code) {
             t.ok(true, "calling autoupdate should execute the provided callback");
-            t.equal(code, 0, "autoupdate return code should match expectation (pass)");
+            t.ok(!code, "autoupdate return code should match expectation (pass)");
         });
     });
 
@@ -47,4 +47,26 @@ test(function(t) {
             t.equal(code, 0, "autoupdate return code should match expectation (pass)");
         });
     });
+
+
+    // checktracking
+    t.test(function(t) {
+        var getGlobalMock = sinon.stub().callsArgWith(0, null, null);
+        var getGlobalMock;
+        
+        t.plan(1);
+
+        checkTracking = autoupdate.__get__('checkTracking');
+        
+        var storageMock = {
+            getGlobal:getGlobalMock 
+        }
+
+        autoupdate.__set__('storage', storageMock);
+
+        checkTracking(function (error, data) {
+            t.ok(true, "callback provided to autoupdate should be executed");
+        }); 
+    });
+
 });
