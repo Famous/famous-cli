@@ -7,4 +7,6 @@ notifications:
   email:
   - lorin@famo.us
   - marianna@famo.us
-  - will @famo.us
+  - will@famo.us
+  slack:
+    secure: mQgNifzgpm+QNL0UF1OTKhcxJJx5q5BffPDMfpithaVtuyRNGj7WZUgIUMSsxJB/vm8bhNjcGcw4njieAXeWpOVIzG71uH4vho+3DnN4CNr0CmEoJFyuUR7uL1pmmqokeSjrqkOGj9ymZPbLI4wOlkYX8eyobAEaCpNALCBMu3s+2iIrDIlqHI1A+7xQhwsO9mrwKm9Zq6GLYptOL3VTexE03SXMbElcwFKbJeTF/B1/Frn2W6VTxcRUxJT/Bp8JwJalHrgV5IJlFoNGAB08kuTziLb81ap732E8H+nMiclmG+pd1h/4dIuQnzWeR50Dsi+HWdQlbOnOndPll8pJYNvSXiNcsRnIMn24XI3tcFdir9lxpUgT/Y3PwaHmopUoqmUj4WxetGHVjEYTVH8yzYJUorPGwSnf8wGV0NTPWSYY3wjyKQ1/BgBkFO671rOYtq2SrLmC0Xu5Q3ztFJv+AD3ycD4WGKls8FbWpIHwGc0rFutx5CJ1jwU2zqJc8SebPqS6G4ZvKDVeEluMNgtJX9GLYVCUcJCafIXE2+CRWHndkrBnN+Ixvp4b88pULi+19gtlkX+618WcF1yKheMdmcozPo1HfqGzQvaIXnfU3HzNikYveRiuadCN4WPrzHgAqNiU4EyoBGfMT1WFtO8byJvpiHdbri5K9Qw3i1x0m2k=
