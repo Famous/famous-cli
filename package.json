@@ -35,7 +35,8 @@
     "mixpanel": "^0.2.1",
     "node-rest-client": "1.4.4",
     "recursive-readdir": "1.2.1",
-    "tar": "^2.1.1"
+    "tar": "^2.1.1",
+    "win-spawn": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^0.21.1",
