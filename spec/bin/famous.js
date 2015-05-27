@@ -9,7 +9,7 @@ tap.test(function(t) {
 
     t.test(function(t) {
         t.plan(3);
-        exec('bin/famous.js', ['fubfub'], function(error, stdout, stderr) {
+        exec('node bin/famous.js', ['fubfub'], function(error, stdout, stderr) {
             t.ok(stdout.match(/Usage:.*/), "unrecognized subcommand should output help");
             t.ok(!error, "unrecognized subcommand should output help");
             t.ok(!stderr, "unrecognized subcommand should output help");
@@ -21,7 +21,7 @@ tap.test(function(t) {
     t.test(function(t) {
         t.plan(11);
 
-        exec('bin/famous.js', function(error, stdout, stderr) {
+        exec('node bin/famous.js', function(error, stdout, stderr) {
             t.ok(stdout.match(/Usage:.*/), "famous should output usage info");
             t.ok(stdout.match(/Commands:.*/), "famous should output commands info");
             t.ok(stdout.match(/Options:.*/), "famous should output Options info");

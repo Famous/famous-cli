@@ -58,6 +58,9 @@ test(function(t) {
         var storageMock = {
             getGlobal: sinon.stub().callsArgWith(0, null, null)
         }
+        var metricsMock = {
+            setTracking: sinon.stub().callsArgWith(1, null)
+        }
         var inquirerMock = {
             prompt: sinon.stub().callsArgWith(1, {tracking:false})
         }
@@ -66,6 +69,7 @@ test(function(t) {
 
         autoupdate.__set__('storage', storageMock);
         autoupdate.__set__('inquirer', inquirerMock);
+        autoupdate.__set__('metrics', metricsMock);
  
         checkTracking = autoupdate.__get__('checkTracking');
         checkTracking(function (error) {
@@ -82,6 +86,9 @@ test(function(t) {
         var storageMock = {
             getGlobal: sinon.stub().callsArgWith(0, null, {})
         }
+        var metricsMock = {
+            setTracking: sinon.stub().callsArgWith(1, null)
+        }
         var inquirerMock = {
             prompt: sinon.stub().callsArgWith(1, {tracking:false})
         }
@@ -90,6 +97,7 @@ test(function(t) {
 
         autoupdate.__set__('storage', storageMock);
         autoupdate.__set__('inquirer', inquirerMock);
+        autoupdate.__set__('metrics', metricsMock);
  
         checkTracking = autoupdate.__get__('checkTracking');
         checkTracking(function (error) {

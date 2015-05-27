@@ -3,6 +3,7 @@ node_js:
 - '0.10'
 - iojs
 sudo: false
+before_script: node './spec/setup.js'
 notifications:
   email:
   - lorin@famo.us
