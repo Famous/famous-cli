@@ -5,7 +5,7 @@ var path = require('path')
 var auto = rewire('../../../lib/util/autogenerate');
 
 tap.test(function(t) {
-    t.plan(7);
+    t.plan(8);
 
     t.type(auto, 'object', "autogenerate should export a function");
     t.type(auto.generateUsername, 'function', "autogenerate should export a generateUserName function");
