@@ -37,6 +37,7 @@
     "recursive-readdir": "1.2.1",
     "slash": "^1.0.0",
     "tar": "^2.1.1",
+    "uuid": "^2.0.1",
     "win-spawn": "^2.0.0"
   },
   "devDependencies": {
