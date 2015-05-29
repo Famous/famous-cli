@@ -8,6 +8,7 @@
     "no-mixed-spaces-and-tabs": 1,
     "eol-last": 2,
     "no-process-exit": 0,
-    "camelcase": 0
+    "camelcase": 0,
+    "new-cap": 0
   }
 }

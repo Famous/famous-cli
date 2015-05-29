@@ -15,64 +15,66 @@ var storage = require('../res/sdk-bundle').storage;
 var auto = require('../lib/autoupdate');
 
 storage.getGlobal(function(error, config){
-    if (config.tracking) metrics.track('cli-event', {'command_data': process.argv.slice(2, process.argv.length).join(" ") || 'help'}, function(){});
+    if (config.tracking) {
+        metrics.track('cli-event', {'command_data': process.argv.slice(2, process.argv.length).join(' ') || 'help'}, function(){});
+    }
 });
 
 auto(function(){
-program
-  .version(require('../package').version);
+    program
+        .version(require('../package').version);
 
-program
-  .command('register')
-  .description('register with Famous Cloud Services.')
-  .action(register);
+    program
+        .command('register')
+        .description('register with Famous Cloud Services.')
+        .action(register);
 
-program
-  .command('login')
-  .description('login with Famous Cloud Services.')
-  .action(login);
+    program
+        .command('login')
+        .description('login with Famous Cloud Services.')
+        .action(login);
 
-program
-  .command('create')
-  .alias('init')
-  .description('create a famous project')
-  .option('-n, --name', 'Name your project')
-  .action(create);
+    program
+        .command('create')
+        .alias('init')
+        .description('create a famous project')
+        .option('-n, --name', 'Name your project')
+        .action(create);
 
-program
-  .command('fork')
-  .description('fork a famous project')
-  .option('-n, --name', 'Name of forked project')
-  .action(fork);
+    program
+        .command('fork')
+        .description('fork a famous project')
+        .option('-n, --name', 'Name of forked project')
+        .action(fork);
 
-program
-  .command('develop')
-  .alias('dev')
-  .description('run your famous project')
-  .action(develop);
+    program
+        .command('develop')
+        .alias('dev')
+        .description('run your famous project')
+        .action(develop);
 
-program
-  .command('deploy')
-  .description('deploy a famous project')
-  .action(deploy);
+    program
+        .command('deploy')
+        .description('deploy a famous project')
+        .action(deploy);
 
-program
-  .command('session')
-  .description('retrieve user session data')
-  .action(userGet);
+    program
+        .command('session')
+        .description('retrieve user session data')
+        .action(userGet);
 
-// program
-//   .command('*')
-//   .action(function(env) {
-//     if (env !== 'project' && env !== 'user' && env !== 'widget') {
-//         program.help();
-//     }
-//   });
+    // program
+    //  .command('*')
+    //  .action(function(env) {
+    //      if (env !== 'project' && env !== 'user' && env !== 'widget') {
+    //          program.help();
+    //     }
+    //   });
 
- program
-  .parse(process.argv);
+    program
+        .parse(process.argv);
 
-if (program.args.length === 0) {
-    program.help();
-}
+    if (program.args.length === 0) {
+        program.help();
+    }
 });
