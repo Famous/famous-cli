@@ -63,14 +63,6 @@ auto(function(){
         .description('retrieve user session data')
         .action(userGet);
 
-    // program
-    //  .command('*')
-    //  .action(function(env) {
-    //      if (env !== 'project' && env !== 'user' && env !== 'widget') {
-    //          program.help();
-    //     }
-    //   });
-
     program
         .parse(process.argv);
 
