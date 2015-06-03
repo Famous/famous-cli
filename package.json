@@ -1,6 +1,6 @@
 {
   "name": "famous-cli",
-  "version": "0.2.8",
+  "version": "0.2.10",
   "description": "CLI interface for Famous Industries Web Services",
   "main": "index.js",
   "repository": "https://github.famo.us/hub/famous-cli.git",
@@ -18,7 +18,7 @@
     "Lorin Beer <lorin@famo.us>",
     "Gabriel Debeaupuis <gabe@famo.us>"
   ],
-  "license": "Proprietary",
+  "license": "MIT",
   "dependencies": {
     "async": "0.9.0",
     "btoa": "1.1.2",
