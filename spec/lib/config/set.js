@@ -12,7 +12,7 @@ var storage_mock = {
 set.__set__('storage', storage_mock);
 
 tap.test(function(t) {
-    t.plan(1);
+    t.plan(2);
 
     t.type(set, 'function', "set should export a function");
 

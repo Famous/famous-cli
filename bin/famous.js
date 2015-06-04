@@ -66,7 +66,7 @@ auto(function(){
 
     program
         .command('set')
-        .option('--devmode [state]',  'set famous cli development  mode')
+        .option('--devmode [state]', 'set famous cli development  mode')
         .option('--tracking [state]', 'set famous cli tracking mode')
         .description('set Famous-CLI modes and config')
         .action(set);
