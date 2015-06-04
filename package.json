@@ -9,7 +9,7 @@
     "famous": "bin/famous.js"
   },
   "scripts": {
-    "test": "tap spec",
+    "test": "tap spec && npm run lint",
     "lint": "eslint bin/ lib/",
     "debug": "node --debug server.js"
   },
