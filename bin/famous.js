@@ -22,7 +22,8 @@ storage.getGlobal(function(error, config){
 
 auto(function(){
     program
-        .version(require('../package').version);
+        .version(require('../package.json').version)
+        .option('-v, --version', 'output the version number');
 
     program
         .command('register')
