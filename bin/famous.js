@@ -64,6 +64,13 @@ auto(function(){
         .action(userGet);
 
     program
+        .command('set')
+        .option('', )
+        .option()
+        .description('retrieve user session data')
+        .action('');
+
+    program
         .parse(process.argv);
 
     if (program.args.length === 0) {
