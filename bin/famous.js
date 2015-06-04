@@ -59,7 +59,8 @@ auto(function(){
         .action(deploy);
 
     program
-        .command('session')
+        .command('whoami')
+        .alias('session')
         .description('retrieve user session data')
         .action(userGet);
 
