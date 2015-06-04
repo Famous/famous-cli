@@ -11,7 +11,7 @@ var userGet = require('../lib/user/get');
 var deploy = require('../lib/deploy');
 var metrics = require('../lib/metrics/mixpanel');
 var storage = require('../res/sdk-bundle').storage;
-var set = require('./config/set');
+var set = require('../lib/config/set');
 var auto = require('../lib/autoupdate');
 
 storage.getGlobal(function(error, config){
@@ -65,9 +65,10 @@ auto(function(){
 
     program
         .command('set')
-        .option('--devmode', 'set famous cli to development mode')
-        .description('retrieve user session data')
-        .action('set');
+        .option('--devmode [state]',  'set famous cli development  mode')
+        .option('--tracking [state]', 'set famous cli tracking mode')
+        .description('set Famous-CLI modes and config')
+        .action(set);
 
     program
         .parse(process.argv);
