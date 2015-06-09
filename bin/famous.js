@@ -9,7 +9,7 @@ var init = require('../lib/project/init');
 var fork = require('../lib/project/fork');
 var develop = require('../lib/dev/dev');
 var userGet = require('../lib/user/get');
-var deploy = require('../lib/deploy');
+var deploy = require('../lib/deploy').deployCLI;
 var metrics = require('../lib/metrics/mixpanel');
 var storage = require('../res/sdk-bundle').storage;
 var set = require('../lib/config/set');
@@ -61,7 +61,7 @@ auto(function(){
         .action(develop);
 
     program
-        .command('deploy')
+        .command('deploy [directory]')
         .description('deploy a famous project')
         .action(deploy);
 
