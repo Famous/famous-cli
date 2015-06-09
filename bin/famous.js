@@ -5,6 +5,7 @@ var program = require('commander');
 var register = require('../lib/user/create');
 var login = require('../lib/user/login');
 var create = require('../lib/project/create');
+var init = require('../lib/project/init');
 var fork = require('../lib/project/fork');
 var develop = require('../lib/dev/dev');
 var userGet = require('../lib/user/get');
@@ -37,10 +38,15 @@ auto(function(){
 
     program
         .command('create')
-        .alias('init')
         .description('create a famous project')
         .option('-n, --name', 'Name your project')
         .action(create);
+
+    program
+        .command('init')
+        .description('init a famous seed repo')
+        .option('-n, --name', 'Name your seed repo')
+        .action(init);
 
     program
         .command('fork')
