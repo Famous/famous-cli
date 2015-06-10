@@ -3,7 +3,7 @@
   "version": "0.3.0",
   "description": "CLI interface for Famous Industries Web Services",
   "main": "index.js",
-  "repository": "https://github.famo.us/hub/famous-cli.git",
+  "repository": "https://github.com/Famous/famous-cli.git",
   "preferGlobal": "true",
   "bin": {
     "famous": "bin/famous.js"
