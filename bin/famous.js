@@ -24,7 +24,8 @@ storage.getGlobal(function(error, config){
 auto(function(){
     program
         .version(require('../package.json').version)
-        .option('-v, --version', 'output the version number');
+        .option('-v, --version', 'output the version number')
+        .option('--loglevel <level>', 'output the version number');
 
     program
         .command('register')
@@ -80,6 +81,17 @@ auto(function(){
 
     program
         .parse(process.argv);
+
+    if (program.loglevel) {
+        var loglevel = program.loglevel;
+        if (loglevel === 1 || loglevel === 'verbose') {
+            process.env.FAMOUS_CLI_LOG_LEVEL = 1;
+        } else if (loglevel === 2 || loglevel === 'debug') {
+            process.env.FAMOUS_CLI_LOG_LEVEL = 2;
+        } else {
+            process.env.FAMOUS_CLI_LOG_LEVEL = 0;
+        }
+    }
 
     if (program.args.length === 0) {
         program.help();
