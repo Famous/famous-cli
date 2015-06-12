@@ -13,7 +13,7 @@ executing `$ famous` will display the default help string
 
 ## Create your first project
 
-Famous seed projects can be creates using the `$ famous create` command. You do not need to be logged in or registered with Hub services to create and develop famous projects.
+Famous seed projects can be created using the `$ famous create` command. You do not need to be logged in or registered with Hub services to create and develop famous projects.
 
     $ famous create
 
