@@ -16,7 +16,8 @@
   "contributors": [
     "Will Gester <will@famo.us>",
     "Lorin Beer <lorin@famo.us>",
-    "Gabriel Debeaupuis <gabe@famo.us>"
+    "Gabriel Debeaupuis <gabe@famo.us>",
+    "Matthew Trost <matthew@famo.us>"
   ],
   "license": "MIT",
   "dependencies": {
@@ -33,11 +34,12 @@
     "mime-types": "^2.0.12",
     "minimist": "1.1.0",
     "mixpanel": "^0.2.1",
+    "mustache": "^2.1.1",
     "node-rest-client": "1.4.4",
     "recursive-readdir": "1.2.1",
     "slash": "^1.0.0",
-    "uuid": "^2.0.1",
     "tar-fs": "^1.5.1",
+    "uuid": "^2.0.1",
     "win-spawn": "^2.0.0"
   },
   "devDependencies": {

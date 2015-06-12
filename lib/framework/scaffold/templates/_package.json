@@ -1,0 +1,15 @@
+{
+  "name": "famous-framework-{{{componentNameHyphenated}}}",
+  "version": "0.0.0",
+  "description": "A Famous Framework component",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "npm run bundle && node node_modules/famous-framework/local/scripts/dev.js develop-component --port=1618 --blocksDirectory=$PWD/public --sourceDirectory=$PWD/{{{componentPath}}}",
+    "publish": "node node_modules/famous-framework/local/scripts/dev.js publish-component --blocksDirectory=$PWD/public",
+    "bundle": "mkdir -p public && cd node_modules/famous-framework && npm run build-runtime -- --outputFile=$PWD/../../public/famous-framework.development.bundle.js && cd ../.."
+  },
+  "dependencies": {
+    "famous-framework": "Famous/framework#v0.9.0"
+  }
+}

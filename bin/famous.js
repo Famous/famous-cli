@@ -14,6 +14,7 @@ var metrics = require('../lib/metrics/mixpanel');
 var storage = require('../res/sdk-bundle').storage;
 var set = require('../lib/config/set');
 var auto = require('../lib/autoupdate');
+var scaffoldFramework = require('../lib/framework/scaffold');
 
 storage.getGlobal(function(error, config){
     if (config.tracking) {
@@ -78,6 +79,11 @@ auto(function(){
         .option('--tracking [state]', 'set famous cli tracking mode')
         .description('set Famous-CLI modes and config')
         .action(set);
+
+    program
+        .command('framework-scaffold')
+        .description('scaffold a new framework component')
+        .action(scaffoldFramework);
 
     program
         .parse(process.argv);
