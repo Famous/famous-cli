@@ -5,12 +5,13 @@ var path = require('path')
 var auto = rewire('../../../lib/util/autogenerate');
 
 tap.test(function(t) {
-    t.plan(8);
+    t.plan(10);
 
     t.type(auto, 'object', "autogenerate should export a function");
     t.type(auto.generateUsername, 'function', "autogenerate should export a generateUserName function");
     t.type(auto.generateEmail, 'function', "autogenerate should export a generateEmail function");
     t.type(auto.generatePassword, 'function', "autogenerate should export a generatePassword function");
+    t.type(auto.generateProjectName, 'function', "autogenerate should export a generateProjectName function");
 
     t.test('generateUsername', function(t) {
         t.plan(2);
@@ -53,4 +54,14 @@ tap.test(function(t) {
         t.equal(email.indexOf(base), 0, "generateEmail should return a properly formatted email address incorporating the provided base");
         t.ok(email.indexOf('@ghost.famo.us') > -1, "generateEmail should return a properly formatted email address with ghost account string");
    });
+
+    t.test('generateProjectName', function(t) {
+        t.plan(3);
+
+        var projectName = auto.generateProjectName();
+
+        t.ok(projectName);
+        t.type(projectName, 'string');
+        t.ok(projectName.indexOf('famous-seed-') > -1);
+    });
 });
