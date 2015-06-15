@@ -2,15 +2,15 @@
 'use strict';
 
 var program = require('commander');
-var register = require('../lib/user/create');
-var login = require('../lib/user/login');
+var develop = require('../lib/dev/dev');
+var deploy = require('../lib/deploy').deployCLI;
+var metrics = require('../lib/metrics/mixpanel');
 var create = require('../lib/project/create');
 var init = require('../lib/project/init');
 var fork = require('../lib/project/fork');
-var develop = require('../lib/dev/dev');
+var register = require('../lib/user/create');
+var login = require('../lib/user/login');
 var userGet = require('../lib/user/get');
-var deploy = require('../lib/deploy').deployCLI;
-var metrics = require('../lib/metrics/mixpanel');
 var storage = require('../res/sdk-bundle').storage;
 var set = require('../lib/config/set');
 var auto = require('../lib/autoupdate');
