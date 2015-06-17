@@ -9,6 +9,6 @@
     "bundle": "mkdir -p public && cd node_modules/famous-framework && npm run build-runtime -- --outputFile=$PWD/../../public/famous-framework.development.bundle.js && cd ../.."
   },
   "dependencies": {
-    "famous-framework": "Famous/framework#v0.10.0"
+    "famous-framework": "Famous/framework#v0.10.1"
   }
 }
