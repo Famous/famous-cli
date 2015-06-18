@@ -12,6 +12,6 @@
     "postinstall": "npm run copy-core-components"
   },
   "dependencies": {
-    "famous-framework": "Famous/framework#v0.10.3"
+    "famous-framework": "Famous/framework#v0.10.5"
   }
 }
