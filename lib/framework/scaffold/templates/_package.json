@@ -5,10 +5,13 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "npm run bundle && node node_modules/famous-framework/dev/dev.js local-only-bootstrap --port=1618 --blocksDirectory=$PWD/public --sourceDirectory=$PWD/components",
-    "bundle": "mkdir -p public && cd node_modules/famous-framework && npm run build-runtime -- --outputFile=$PWD/../../public/famous-framework.development.bundle.js && cd ../.."
+    "copy-core-components": "famous-framework copy-core-components --destinationFolder=components/famous",
+    "local-only-bootstrap": "famous-framework local-only-bootstrap --blocksDirectory=public --sourceDirectory=components --port=1618",
+    "bundle": "famous-framework watch-runtime --inputFile=node_modules/famous-framework/lib/index.js --outputFile=public/famous-framework.development.bundle.js --serverHost=http://localhost:1618",
+    "dev": "npm run bundle & npm run local-only-bootstrap",
+    "postinstall": "npm run copy-core-components"
   },
   "dependencies": {
-    "famous-framework": "Famous/framework#v0.10.1"
+    "famous-framework": "Famous/framework#v0.10.3"
   }
 }
