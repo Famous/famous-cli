@@ -5,6 +5,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "snapshot-component": "famous-framework snapshot-component --destinationDirectory=public --blocksDirectory=public --sourceDirectory=components",
     "copy-core-components": "famous-framework copy-core-components --destinationFolder=components/famous",
     "local-only-bootstrap": "famous-framework local-only-bootstrap --blocksDirectory=public --sourceDirectory=components --port=1618",
     "bundle": "famous-framework watch-runtime --inputFile=node_modules/famous-framework/lib/index.js --outputFile=public/famous-framework.development.bundle.js --serverHost=http://localhost:1618",
@@ -12,6 +13,6 @@
     "postinstall": "npm run copy-core-components"
   },
   "dependencies": {
-    "famous-framework": "Famous/framework#v0.10.5"
+    "famous-framework": "Famous/framework#v0.10.7"
   }
 }
