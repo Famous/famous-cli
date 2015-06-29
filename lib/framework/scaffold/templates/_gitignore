@@ -1,4 +1,4 @@
 .DS_Store
 *.log
 node_modules
-public/v1
+public/build
