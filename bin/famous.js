@@ -10,6 +10,7 @@ var init = require('../lib/project/init');
 var fork = require('../lib/project/fork');
 var register = require('../lib/user/create').createUserCLI;
 var login = require('../lib/user/login');
+var logout = require('../lib/user/logout');
 var userGet = require('../lib/user/get');
 var storage = require('../res/sdk-bundle').storage;
 var set = require('../lib/config/set');
@@ -37,6 +38,11 @@ auto(function(){
         .command('login')
         .description('login with Famous Cloud Services.')
         .action(login);
+
+    program
+        .command('logout')
+        .description('logout from Famous Cloud Services.')
+        .action(logout);
 
     program
         .command('create')
