@@ -3,12 +3,9 @@
 
 var program = require('commander');
 var develop = require('../lib/dev/dev');
-var deploy = require('../lib/deploy').deployCLI;
 var metrics = require('../lib/metrics/mixpanel');
 var create = require('../lib/project/create');
 var init = require('../lib/project/init');
-var fork = require('../lib/project/fork');
-var register = require('../lib/user/create').createUserCLI;
 var login = require('../lib/user/login');
 var logout = require('../lib/user/logout');
 var userGet = require('../lib/user/get');
