@@ -30,11 +30,6 @@ auto(function(){
         .option('--loglevel <level>', 'output the version number');
 
     program
-        .command('register')
-        .description('register with Famous Cloud Services.')
-        .action(register);
-
-    program
         .command('login')
         .description('login with Famous Cloud Services.')
         .action(login);
@@ -57,21 +52,10 @@ auto(function(){
         .action(init);
 
     program
-        .command('fork')
-        .description('fork a famous project')
-        .option('-n, --name', 'Name of forked project')
-        .action(fork);
-
-    program
         .command('develop')
         .alias('dev')
         .description('run your famous project')
         .action(develop);
-
-    program
-        .command('deploy [directory]')
-        .description('deploy a famous project')
-        .action(deploy);
 
     program
         .command('whoami')

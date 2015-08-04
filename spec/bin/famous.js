@@ -19,7 +19,7 @@ tap.test(function(t) {
     });
 
     t.test(function(t) {
-        t.plan(11);
+        t.plan(10);
 
         exec('node bin/famous.js', function(error, stdout, stderr) {
             t.ok(stdout.match(/Usage:.*/), "famous should output usage info");
@@ -27,7 +27,6 @@ tap.test(function(t) {
             t.ok(stdout.match(/Options:.*/), "famous should output Options info");
             t.ok(stdout.match(/login\ .*/), "famous should output login command info");  
             t.ok(stdout.match(/create|init [options] \ .*/), "famous should output create|init command info");
-            t.ok(stdout.match(/fork \[options\] \ .*/), "famous should output fork command info");
             t.ok(stdout.match(/develop|dev\ .*/), "famous should output develop|dev command info");
             t.ok(stdout.match(/init \[options\]\ .*/), "famous should output init command info");
             t.ok(stdout.match(/-h, --help\ .*/), "famous should output help options info");
