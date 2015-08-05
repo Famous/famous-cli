@@ -1,9 +1,10 @@
 # famous-cli
 
-Famous Cloud Services Command Line Utility
+The Famous Cloud Services Project is currently being deprecated.
 
-register, manage user accounts, create, update and share projects
+All services which would allow project deployment or registration have been disabled. Please accept our deepest apologies for the inconvenience this may cause.
 
+I would like to thank our users, contributers and supporters. Please reach out to us on the [famous community slack channel](http://slack.famous.org/) with comments and concerns. 
 
 ## Install the CLI
 
@@ -26,21 +27,9 @@ You can develop your seed project locally using `$ famous develop`. This will in
 
     $ famous develop
 
-### Register with Famous Cloud Services
-
-    $ famous register
-
-Registering allows you to push your seed projects to the cloud.
-
 ### Login
 
     $ famous login
 
 and follow the prompts to login to your Famous Cloud Services user account. Note that if you ran `$ famous register` you are automatically logged in.
-
-### Deploy
-
-Once you are logged in you can deploy your seed project to the cloud. `$ Famous deploy` builds your project and deploys it to a Hub container which is viewable by visiting the share link or embeddable using the returned HTML.
-
-    $ famous deploy
 
